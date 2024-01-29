@@ -1,0 +1,12 @@
+.disable-screen{
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+ input[type='text'] {
+    color: black;
+ }
+
+ .card {
+    height: 1000vh;
+ }

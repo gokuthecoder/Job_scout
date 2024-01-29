@@ -1,0 +1,45 @@
+.sticky-footer {
+  position: fixed;
+  top: 91vh;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: rgb(0 0 0 / 80%);
+  border-radius: 12px solid transparent;
+}
+
+@media only screen and (min-width: 990px) {
+  #navbarNav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.custom-dropdown .dropdown-menu {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.custom-dropdown .dropdown-item {
+  color: #333;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.custom-dropdown .dropdown-toggle::after {
+  content: "\25BC";
+  margin-left: 5px;
+}

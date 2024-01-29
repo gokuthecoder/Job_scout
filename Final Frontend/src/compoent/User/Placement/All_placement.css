@@ -1,0 +1,11 @@
+.card {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Adjust the scale factor as needed */
+  }
+
+  .card.mouseout {
+    transform: scale(1); /* Return to the default size */
+  }

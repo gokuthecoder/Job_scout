@@ -1,0 +1,28 @@
+form {
+    font-family: Lato !important;
+}
+
+.btn ,.btn-success {
+    /* justify-self: center; */
+    margin:  auto !important;
+    width: 120px;
+}
+
+.form-control {
+    justify-content: baseline;
+    /* text-align: center; */
+}
+
+.job_legend {
+    margin: 20px;
+    width: 155px;
+}
+
+.my_fieldset {
+    border: 3px solid;
+}
+
+
+.pointer {
+    pointer-events:stroke;
+}

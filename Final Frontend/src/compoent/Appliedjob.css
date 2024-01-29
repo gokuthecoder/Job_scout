@@ -1,0 +1,25 @@
+input[type=number],.select_me, input[type=text]{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 90%;
+    border: 1px solid #818181;
+    padding: 5px;
+}
+.description {
+    /* text-align: center; */
+    display: block;
+    margin: auto;
+    width: 50%;
+    /* border: 1px solid #818181; */
+    padding: 5px;
+}
+
+.file_upload{
+    display: block;
+    margin: auto;
+    width: 50%;
+    border: 1px solid #81818100;
+    padding: 5px;
+}
+

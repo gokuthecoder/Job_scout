@@ -1,0 +1,55 @@
+.container {
+  box-sizing: border-box;
+}
+
+.main-card {
+  height: 35px;
+}
+
+.card {
+  display: inline-block;
+  margin: 5px;
+  max-height: 400px;
+  background-color: #ffff !important;
+  border: 2px solid rgba(247, 247, 247, 0);
+  align-items: baseline;
+  position: relative;
+}
+
+img {
+  position: relative;
+  left: 25%;
+}
+
+.card-title {
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.div {
+  display: inline-block;
+}
+
+.card-header {
+  color: #00684a !important;
+  font-family: monospace;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+
+@media (min-width: 768px) {
+  .card {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    min-height: 100px;
+  }
+}
