@@ -1,0 +1,2223 @@
+{
+	"info": {
+		"_postman_id": "1b359baf-8e89-4f0b-98d1-1c05faf75663",
+		"name": "JOB PORTAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29864129"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "User Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "vishalkr12012001@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:4000/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "appliedjob",
+					"item": [
+						{
+							"name": "appliedjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "this is description",
+											"type": "text"
+										},
+										{
+											"key": "jobId",
+											"value": "650a77046ae42d420e0e5349",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "65066c7a5f611be89935b20b",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/React Js/REACYTTTTT/IMAGE HOVER LIKE FLIPKART/IMAGE HOVER LIKE FLIPKART/images/2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/appliedjob/add",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"appliedjob",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallappliedjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/appliedjob/all",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"appliedjob",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSingleappliedjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6467b5b59fa3cd6bb3a514ea",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/appliedjob/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"appliedjob",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateappliedjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "650a79096ae42d420e0e5380",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/ASUS/Pictures/Saved Pictures/8b69cd12-da96-44f5-933a-9d5715d7ec89 - Copy.jfif"
+										},
+										{
+											"key": "description",
+											"value": "this is description",
+											"type": "text"
+										},
+										{
+											"key": "jobId",
+											"value": "650a77046ae42d420e0e5349",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "65066c7a5f611be89935b20b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/appliedjob/update",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"appliedjob",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatestatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "650a79096ae42d420e0e5380",
+											"type": "default"
+										},
+										{
+											"key": "appliedJobstatus",
+											"value": "pending",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/appliedjob/updatestatus",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"appliedjob",
+										"updatestatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteappliedjob",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:4000/user/appliedjob/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"appliedjob",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "_id",
+											"value": "6461a8cf431351ed538c141f",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "addstudent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": " Roan",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "user@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "uniRoll",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "8978555565",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Sheikepind",
+											"type": "text"
+										},
+										{
+											"key": "semester",
+											"value": "2nd",
+											"type": "text"
+										},
+										{
+											"key": "branchId",
+											"value": "64619cc4b60756eac32dfa37",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "Civil Engineer",
+											"type": "text"
+										},
+										{
+											"key": "joinyear",
+											"value": "2020",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/student/add",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"student",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglestudent",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6468d3465921f4877d046540",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/student/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"student",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "studentupdate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6468d3465921f4877d046540",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "peeker",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "osama@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "uniRoll",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "+61-3243437655",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "debian city",
+											"type": "text"
+										},
+										{
+											"key": "semester",
+											"value": "2nd",
+											"type": "text"
+										},
+										{
+											"key": "branchId",
+											"value": "64619cc4b60756eac32dfa37",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "berojgar",
+											"type": "text"
+										},
+										{
+											"key": "joinyear",
+											"value": "2016",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/student/update",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"student",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "company",
+					"item": [
+						{
+							"name": "getallcompany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/company/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"company",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleCompany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd05fa55383b2ed039cf87",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/company/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"company",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Branch",
+					"item": [
+						{
+							"name": "getallbranch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/branch/all",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"branch",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglebranch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd080755383b2ed039cfa9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/branch/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"branch",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Job",
+					"item": [
+						{
+							"name": "getalljob",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "branchId",
+											"value": "64fd080755383b2ed039cfa9",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/job/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglejob",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd09f455383b2ed039cfc7",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/job/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"job",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Placement",
+					"item": [
+						{
+							"name": "getallplacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "placementId",
+											"value": "2",
+											"description": "___",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "64fd0e3155383b2ed039cfd6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/placement/all",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"placement",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleplacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd0e3155383b2ed039cfd6",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/placement/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"placement",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "getsinglecontact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6461b3aa7411a8c5599c636c",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/contact/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"contact",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getupdatecontact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6461b3aa7411a8c5599c636c",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Bogyman",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "848484848",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "this is Jhon wick",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/contact/update",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"contact",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addcontact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Bogyman",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "bogyman@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "subject",
+											"value": "this is  bodyman(\"Jhon Wick\")",
+											"type": "default"
+										},
+										{
+											"key": "message",
+											"value": "Knock Knock this is Jhon Wick",
+											"type": "default"
+										},
+										{
+											"key": "mobile",
+											"value": "+62-2133444555",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/contact/add",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"contact",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Admin_Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODQ0NTUyODcsImV4cCI6MTY4NDg4NzI4N30.PUPeu5lujDsBVyuPm7m0LecA1H6SAmHCY2OWYo7OUoU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/login",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "UserStatusupdate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6468d3465921f4877d04653c",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/user/status/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"user",
+										"status",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleuser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6468d3465921f4877d04653c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/user/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"user",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalluser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/user/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "getsinglestudent",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64684aaf2847ddd19c59eea4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/student/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"student",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallstudent",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/student/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"student",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "company",
+					"item": [
+						{
+							"name": "addcompany",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "THIS IS ADD COMPANY DESCRIPTIONn",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "ALASKA",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "phone no:3323425344",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "BATMAN@WORLD.ORGg",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot (113).png"
+										},
+										{
+											"key": "location",
+											"value": "GAUTAM CITYy",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/company/add",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"company",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "650a75ed6ae42d420e0e532d",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/company/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"company",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallcompany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/company/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"company",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCompany",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "650a75ed6ae42d420e0e532d",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Delta 2",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Delta is  Comapny",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "punjab",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "gulmohar city",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "8968023031",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "delta@gmial.com",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot (114).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/company/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"company",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatestatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "650a75ed6ae42d420e0e532d",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/company/status/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"company",
+										"status",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Branch",
+					"item": [
+						{
+							"name": "addbranch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Titu",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/branch/add",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"branch",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallbranch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/branch/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"branch",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglebranch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd080755383b2ed039cfa9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/branch/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"branch",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebranch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd080755383b2ed039cfa9",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Supreme",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/branch/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"branch",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatestatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd080755383b2ed039cfa9",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/branch/status/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"branch",
+										"status",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Job",
+					"item": [
+						{
+							"name": "addjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "UPSC",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "THIS IS GOVERMENT JOB",
+											"type": "text"
+										},
+										{
+											"key": "semester",
+											"value": "5TH",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "BA Completed",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/L-23/2.png"
+										},
+										{
+											"key": "companyId",
+											"value": "646198c7b60756eac32dfa33",
+											"type": "text"
+										},
+										{
+											"key": "branchId",
+											"value": "6462ffaf8a699de68d9bbff3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/job/add",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalljob",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/job/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglejob",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd09f455383b2ed039cfc7",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/job/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "job update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "64fd09f455383b2ed039cfc7",
+											"type": "text"
+										},
+										{
+											"key": "companyId",
+											"value": "6469912387e6b8eaa7b1240c",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "MERN STACK DEVELOPER",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "job is updatedd",
+											"type": "text"
+										},
+										{
+											"key": "semester",
+											"value": "2ndd",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "React, Angular, Java",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/job/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatestatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd09f455383b2ed039cfc7",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/job/status/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"job",
+										"status",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Placement",
+					"item": [
+						{
+							"name": "addplacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job",
+											"value": "PRIVATE",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "THIS IS PLACEMENT DESCRIPTION",
+											"type": "text"
+										},
+										{
+											"key": "companyId",
+											"value": "Q-FINDER",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "HOMELANDER",
+											"type": "text"
+										},
+										{
+											"key": "branch",
+											"value": "MECHANICAL",
+											"type": "text"
+										},
+										{
+											"key": "salaryPackage",
+											"value": "$2000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/L-23/3.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/placement/add",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"placement",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallplacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "localhost:4000/admin/placement/all",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"placement",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsingleplacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd0e3155383b2ed039cfd6",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/placement/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"placement",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatePlacement",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "64fd0e3155383b2ed039cfd6",
+											"type": "text"
+										},
+										{
+											"key": "job",
+											"value": "Mechanica",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This is MERN STAK",
+											"type": "text"
+										},
+										{
+											"key": "companyId",
+											"value": "TECHY",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "vishalL",
+											"type": "text"
+										},
+										{
+											"key": "branch",
+											"value": "mechanica",
+											"type": "text"
+										},
+										{
+											"key": "salaryPackage",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot 2023-09-19 141406.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/placement/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"placement",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "statusupdate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd0e3155383b2ed039cfd6",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/placement/status/update",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"placement",
+										"status",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "appliedjob",
+					"item": [
+						{
+							"name": "getallappliedjob",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/appliedjob/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"appliedjob",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSingleappliedjob",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd0ff255383b2ed039cffc",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/appliedjob/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"appliedjob",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appliedjobstatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd0ff255383b2ed039cffc",
+											"type": "default"
+										},
+										{
+											"key": "appliedJobstatus",
+											"value": "active",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/appliedjob/updatestatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"appliedjob",
+										"updatestatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "getallcontact",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/contact/all",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"contact",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getsinglecontact",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64fd148be1bf36802b8bb9e3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/contact/single",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"contact",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"item": [
+						{
+							"name": "Dashboard",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/dashboard",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"dashboard"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"id": "d31926dc-10c6-4ad0-8992-da54e56112b0",
+	"values": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGZkMDM2MTU1MzgzYjJlZDAzOWNmN2IiLCJuYW1lIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiMSIsImlhdCI6MTY5NTM2MDE4OCwiZXhwIjoxNjk1NzkyMTg4fQ.a0CrDJS2BBpHW-RLwhEhBPZiB90ALb-Y6_6ZlET8PeI",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "baseurl",
+			"value": "localhost:4000/",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-09-22T06:19:58.847Z",
+	"_postman_exported_using": "Postman/10.18.4-230920-1050"
+}

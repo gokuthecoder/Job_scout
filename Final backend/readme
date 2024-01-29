@@ -1,0 +1,25 @@
+//plcement me dobara addd krne se add ho rha h
+
+const { JsonWebTokenError } = require("jsonwebtoken")
+
+//update placement prevplacement lagega ya nhi => ans is  no
+
+
+// studentupdate kaun kr skta h  ye kuchh bhi nhi , ye upadte hota hi nhi
+// aur userupdate kaun kr skta ho
+
+
+//kya adduser and addstudent dono api banegi// adduer nhi banegi
+
+
+//postman lete h hm user ko update kiye to fir student to update nhi hoga fir to ye dikkat wali baat h
+
+//appliedjob me fs.unlinkSync work nhi ho rha
+
+
+//jha jha image wala kam h wha pr replace wala kam kr lo || fs.unlinkSync
+
+// please view JsonWebTokenError
+
+// mam ji jab user addcustomer ke api ko secure kre ya nhi
+
